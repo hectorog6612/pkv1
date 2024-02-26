@@ -30,9 +30,9 @@ import io
 import logging
 
 bot = Client("bot",
-             bot_token= "6334241757:AAHo1iSa_LcjP6jbbEO-Wz1H8wp9Oj9tZSk",
-             api_id= 20225480,
-             api_hash= "70f93c98c61a40f69c0f830bd4fece7c")
+             bot_token= "6943973940:AAFHDfIULwfBtgrXybZ8_27554Ru7Vkyxdo",
+             api_id= 27803618,
+             api_hash= "2cdaef9643189f6bd9c7b31a70257356")
 
 
 @bot.on_message(filters.command(["start"]))
@@ -175,7 +175,7 @@ async def account_login(bot: Client, m: Message):
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
-                        copy = await bot.send_document(chat_id= -1002021098463)
+                        copy = await bot.send_document(chat_id= -1002085617089)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
-                        copy = await bot.send_document(chat_id= -1002021098463)
+                        copy = await bot.send_document(chat_id= -1002085617089)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
