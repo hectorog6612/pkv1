@@ -21,8 +21,6 @@ aiofiles
 pytz
 umongo==3.1.0
 speedtest-cli
-yt-dlp
 ffmpeg
 httpx[http2]
 img2pdf
-tglogging
